@@ -1,52 +1,39 @@
-# Leemos los precios y las cantidades de cada artículo para cada sucursal
-art1_precios = []
-art2_precios = []
-art3_precios = []
-art4_precios = []
-art5_precios = []
-art1_cantidades = []
-art2_cantidades = []
-art3_cantidades = []
-art4_cantidades = []
-art5_cantidades = []
-
-for i in range(4):
-    print(f"Sucursal {i+1}:")
-    precio = float(input("Precio artículo 1: "))
-    art1_precios.append(precio)
-    cantidad = int(input("Cantidad artículo 1: "))
-    art1_cantidades.append(cantidad)
-    precio = float(input("Precio artículo 2: "))
-    art2_precios.append(precio)
-    cantidad = int(input("Cantidad artículo 2: "))
-    art2_cantidades.append(cantidad)
-    precio = float(input("Precio artículo 3: "))
-    art3_precios.append(precio)
-    cantidad = int(input("Cantidad artículo 3: "))
-    art3_cantidades.append(cantidad)
-    precio = float(input("Precio artículo 4: "))
-    art4_precios.append(precio)
-    cantidad = int(input("Cantidad artículo 4: "))
-    art4_cantidades.append(cantidad)
-    precio = float(input("Precio artículo 5: "))
-    art5_precios.append(precio)
-    cantidad = int(input("Cantidad artículo 5: "))
-    art5_cantidades.append(cantidad)
+# Leemos las cantidades de cada artículo para cada sucursal
+suc1_art1 = int(input("Cantidad artículo 1 en sucursal 1: "))
+suc1_art2 = int(input("Cantidad artículo 2 en sucursal 1: "))
+suc1_art3 = int(input("Cantidad artículo 3 en sucursal 1: "))
+suc1_art4 = int(input("Cantidad artículo 4 en sucursal 1: "))
+suc1_art5 = int(input("Cantidad artículo 5 en sucursal 1: "))
+suc2_art1 = int(input("Cantidad artículo 1 en sucursal 2: "))
+suc2_art2 = int(input("Cantidad artículo 2 en sucursal 2: "))
+suc2_art3 = int(input("Cantidad artículo 3 en sucursal 2: "))
+suc2_art4 = int(input("Cantidad artículo 4 en sucursal 2: "))
+suc2_art5 = int(input("Cantidad artículo 5 en sucursal 2: "))
+suc3_art1 = int(input("Cantidad artículo 1 en sucursal 3: "))
+suc3_art2 = int(input("Cantidad artículo 2 en sucursal 3: "))
+suc3_art3 = int(input("Cantidad artículo 3 en sucursal 3: "))
+suc3_art4 = int(input("Cantidad artículo 4 en sucursal 3: "))
+suc3_art5 = int(input("Cantidad artículo 5 en sucursal 3: "))
+suc4_art1 = int(input("Cantidad artículo 1 en sucursal 4: "))
+suc4_art2 = int(input("Cantidad artículo 2 en sucursal 4: "))
+suc4_art3 = int(input("Cantidad artículo 3 en sucursal 4: "))
+suc4_art4 = int(input("Cantidad artículo 4 en sucursal 4: "))
+suc4_art5 = int(input("Cantidad artículo 5 en sucursal 4: "))
 
 # Calculamos las cantidades totales de cada artículo
-art1_total = sum(art1_cantidades)
-art2_total = sum(art2_cantidades)
-art3_total = sum(art3_cantidades)
-art4_total = sum(art4_cantidades)
-art5_total = sum(art5_cantidades)
+art1_total = suc1_art1 + suc2_art1 + suc3_art1 + suc4_art1
+art2_total = suc1_art2 + suc2_art2 + suc3_art2 + suc4_art2
+art3_total = suc1_art3 + suc2_art3 + suc3_art3 + suc4_art3
+art4_total = suc1_art4 + suc2_art4 + suc3_art4 + suc4_art4
+art5_total = suc1_art5 + suc2_art5 + suc3_art5 + suc4_art5
 
 # Calculamos la cantidad de artículos en sucursal 2
-articulos_sucursal2 = art1_cantidades[1] + art2_cantidades[1] + art3_cantidades[1] + art4_cantidades[1] + art5_cantidades[1]
+articulos_sucursal2 = suc2_art1 + suc2_art2 + suc2_art3 + suc2_art4 + suc2_art5
 
 # Calculamos la cantidad del artículo 3 en la sucursal 1
-art3_sucursal1 = art3_cantidades[0]
+art3_sucursal1 = suc1_art3
 
 # Calculamos la recaudación total de cada sucursal
-sucursal1_recaudacion = sum([art1_precios[0]*art1_cantidades[0], art2_precios[0]*art2_cantidades[0], art3_precios[0]*art3_cantidades[0], art4_precios[0]*art4_cantidades[0], art5_precios[0]*art5_cantidades[0]])
-sucursal2_recaudacion = sum([art1_precios[1]*art1_cantidades[1], art2_precios[1]*art2_cantidades[1], art3_precios[1]*art3_cantidades[1], art4_precios[1]*art4_cantidades[1], art5_precios[1]*art5_cantidades[1]])
-sucursal3_recaudacion = sum([art1_precios[2]*art1_cantidades[2], art2_precios[2]*art2_cantidades[2], art3_precios[2]*art3_cantidades[2], art4_precios[2]*art4_cantidades[2], art5_precios[2]*art5_cantidades[2]])
+sucursal1_recaudacion = suc1_art1*precio_art1 + suc1_art2*precio_art2 + suc1_art3*precio_art3 + suc1_art4*precio_art4 + suc1_art5*precio_art5
+sucursal2_recaudacion = suc2_art1*precio_art1 + suc2_art2*precio_art2 + suc2_art3*precio_art3 + suc2_art4*precio_art4 + suc2_art5*precio_art5
+sucursal3
